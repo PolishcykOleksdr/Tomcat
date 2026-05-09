@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0"
+         metadata-complete="true">
+
+    <display-name>TomcatServer</display-name>
+
+    <servlet>
+        <servlet-name>CreateProductServlet</servlet-name>
+        <servlet-class>com.test.project.servlets.CreateProductServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreateProductServlet</servlet-name>
+        <url-pattern>/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteOrderById</servlet-name>
+        <servlet-class>com.test.project.servlets.DeleteOrderById</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteOrderById</servlet-name>
+        <url-pattern>/delete/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetAllOrdersServlet</servlet-name>
+        <servlet-class>com.test.project.servlets.GetAllOrdersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetAllOrdersServlet</servlet-name>
+        <url-pattern>/all</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetOrderByIdServlet</servlet-name>
+        <servlet-class>com.test.project.servlets.GetOrderByIdServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetOrderByIdServlet</servlet-name>
+        <url-pattern>/get/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateOrderServlet</servlet-name>
+        <servlet-class>com.test.project.servlets.UpdateOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateOrderServlet</servlet-name>
+        <url-pattern>/update/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
